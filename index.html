@@ -170,7 +170,10 @@ function parse_query_string(query) {
 }
 
 args = parse_query_string(location.search);
-$('#title').text(args.title);
+if(args.title){
+  $('#title').text(args.title);
+  $('title').text(args.title);
+}
 
 // translation
 
